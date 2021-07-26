@@ -1,0 +1,2507 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FrameworkEhCOS
+import AVFoundation
+import CVCalendar
+import CallKit
+import Charts
+import CoreBluetooth
+import DropDown
+import Foundation
+@_exported import FrameworkEhCOS
+import HuhFramework
+import MessageUI
+import MobileCoreServices
+import Photos
+import PopOverMenu
+import RxSwift
+import SDWebImage
+import SafariServices
+import Starscream
+import Swift
+import SwiftyJSON
+import SwiftyTimer
+import Toast_Swift
+import UIKit
+import WebKit
+import WebRTC
+@objc @_inheritsConvenienceInitializers public class CalendarDetailTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet public var subtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet public var hoursLabel: UIKit.UILabel!
+  @objc @IBOutlet public var roundedView: UIKit.UIView!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class EmailHistoryTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var fromTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var fromLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var toTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var toLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subjectTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subjectLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var contentLabel: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class CountryViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc @IBOutlet weak public var searchBar: UIKit.UISearchBar!
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension CountryViewController {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension CountryViewController : UIKit.UISearchBarDelegate {
+  @objc dynamic public func searchBarCancelButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @objc dynamic public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class PollRouter {
+  public class func createModule(actionBar: FrameworkEhCOS.ActionBar, userNameNhc: Swift.String?, readOnly: Swift.Bool, pendingOrFinished: Swift.Bool, pollTab: FrameworkEhCOS.PollTab) -> UIKit.UIViewController
+  @objc deinit
+}
+public protocol ResultCode {
+  var resultCode: Swift.String? { get set }
+  var resultDescription: Swift.String? { get set }
+}
+@objc @_hasMissingDesignatedInitializers public class GroupListViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet public var titleLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension GroupListViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers public class LoginViewController : UIKit.UIViewController, UIKit.UIApplicationDelegate {
+  public static let shared: FrameworkEhCOS.RemoteLib
+  @objc @IBOutlet weak public var username: FrameworkEhCOS.HCRGenericTextField!
+  @objc @IBOutlet weak public var password: FrameworkEhCOS.HCRGenericTextField!
+  @objc @IBOutlet weak public var loginButton: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet weak public var activeEntityButton: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet weak public var saveCredentiales: FrameworkEhCOS.CheckBox!
+  @objc @IBOutlet weak public var labelSaveCredentiales: UIKit.UILabel!
+  @objc @IBOutlet weak public var selectEntityView: UIKit.UIStackView!
+  @objc @IBOutlet weak public var selectEntityButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var showPasswordButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var titleImageView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var buttonBack: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet weak public var rememberPasswordButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var technicalSupportButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var noCredentialsInfoLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var viewEntityConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var viewUserConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var viewButtonConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var imageEntity: UIKit.UIImageView!
+  @objc @IBOutlet weak public var logoContraint: UIKit.NSLayoutConstraint!
+  public var isCommingFromLogout: Swift.Bool
+  public var tutorTutorizedPopoverViewController: FrameworkEhCOS.TutorTutorizedPopoverViewController?
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension LoginViewController : FrameworkEhCOS.LoginPresenterToViewProtocol {
+  public func setTutorTutorizedPopoverController(response: FrameworkEhCOS.LoginResponse)
+  public func dismissTutorTutorizedPopover()
+  public func showOnlyTutorCanAccess()
+  public func showSupportDialog()
+  public func showForgotPasswordDialog()
+  public func showForgotPasswordDialogPopup()
+  public func loadEntities(with array: [FrameworkEhCOS.EntityList], version: Swift.String)
+  public func loadEntities(with array: [FrameworkEhCOS.EntityList])
+  public func goChangePassword()
+  public func loadEntitiesFilter(with fireb: [FrameworkEhCOS.EntityListFilter])
+}
+extension LoginViewController : UIKit.UIPopoverPresentationControllerDelegate {
+  @objc dynamic public func adaptivePresentationStyle(for controller: UIKit.UIPresentationController) -> UIKit.UIModalPresentationStyle
+  @objc dynamic public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+  @objc dynamic public func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController) -> Swift.Bool
+}
+@objc @_hasMissingDesignatedInitializers public class ContactModViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @objc @IBOutlet weak public var textFieldDirection: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldCp: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldLocation: UIKit.UITextField!
+  @objc @IBOutlet weak public var buttonSelectProvince: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonSelectCountry: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonProvince: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonCountry: UIKit.UIButton!
+  @objc @IBOutlet weak public var textFieldEmail: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldAlternateEmail: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldPhone: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldAlternatePhone: UIKit.UITextField!
+  @objc @IBOutlet weak public var lblHeader: UIKit.UILabel!
+  @objc @IBOutlet weak public var sendData: UIKit.UIButton!
+  @objc @IBOutlet weak public var viewFooter: UIKit.UIView!
+  @objc @IBOutlet weak public var scrollView: UIKit.UIScrollView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@_hasMissingDesignatedInitializers public class RemoteLib {
+  public static let shared: FrameworkEhCOS.RemoteLib
+  final public let settingsManager: FrameworkEhCOS.SettingsManager
+  public func setConfig(_ config: FrameworkEhCOS.LibConfig)
+  public func setVersionUpdate(_ update: Swift.Bool)
+  public func setBadgeGeneric(_ badge: Swift.Bool)
+  public func setInitialLanguage()
+  public func setToken(_ token: Swift.String)
+  public func setWelcomeMessage(welcomeMessage_es: Swift.String, welcomeMessage_ca: Swift.String, welcomeMessage_en: Swift.String = "", welcomeMessage_pt: Swift.String = "", welcomeMessage_de: Swift.String = "")
+  public func setHomeMessage(homeMessage_es: Swift.String, homeMessage_ca: Swift.String, homeMessage_en: Swift.String = "", homeMessage_pt: Swift.String = "", homeMessage_de: Swift.String = "")
+  public func setEntityConfig(appEntityCode: Swift.String = "", entityCode: Swift.String = "", server: Swift.String = "", videoServer: Swift.String = "", videoStun: Swift.String = "", videoNM: Swift.String = "", videoNNi2cat: Swift.String = "")
+  public func setValidateSession(validate: Swift.Bool)
+  public func setValidacionTutorUserId(tutorUserId: Swift.Int = 0)
+  public func setValidacionTypeUserTutor(typeUserTutor: Swift.String = "")
+  public func setValidacionTypeTokenTutor(tokenTutor: Swift.String = "")
+  public func setCheckCredential(check: Swift.Bool)
+  public func setSaveCredentialLogin(username: Swift.String = "", password: Swift.String = "", saveCredentiales: Swift.Bool, entity: Swift.String)
+  public func videoCallSystem(videoCallSystem: Swift.String)
+  public func setUserAgeBirthdate(userGender: Swift.String, userBirthdate: Swift.String)
+  public func setNameInitialViewController(storyboardName: Swift.String, viewControllerIdentifier: Swift.String)
+  @objc deinit
+}
+public class ActionBar {
+  public init()
+  public init(id: Swift.Int?, name: Swift.String?, image: UIKit.UIImage?, movementID: Swift.Int?, withCheck: Swift.Bool?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ConferenceNMCitaRouter {
+  public static func createModule() -> UIKit.UIViewController
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class AppointmentViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension AppointmentViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers public class ConferenceNMUserCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet weak public var userImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var deleteButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var nameLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var stateLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var heightStateLabel: UIKit.NSLayoutConstraint!
+  @objc override dynamic public func awakeFromNib()
+  @objc @IBAction public func deleteAction(_ sender: Any)
+  public func configureCell()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMCitaViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var newConferenceButton: FrameworkEhCOS.CustomNextButton!
+  @objc @IBOutlet weak public var newConferenceBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelHeader: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc @IBAction public func newConferenceAction(_ sender: Any)
+  public func configureView()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ConferenceNMCitaViewController : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension ConferenceNMCitaViewController : UIKit.UITableViewDelegate {
+}
+@objc @_inheritsConvenienceInitializers public class ReceiverTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var title: UIKit.UILabel!
+  @objc @IBOutlet weak public var removeButton: UIKit.UIButton!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@_hasMissingDesignatedInitializers public class LoginPresenter {
+  @objc deinit
+}
+extension LoginPresenter {
+  public func loginSucceed(_ response: FrameworkEhCOS.LoginResponse)
+  public func serviceFailed(_ error: Swift.Error)
+  public func entitiesServiceFailed(_ error: Swift.Error)
+  public func entityErrorDisabled()
+  public func showTutorTutorized(_ response: FrameworkEhCOS.LoginResponse)
+  public func showOnlyTutorCanAccess()
+  public func listEntities(_ model: FrameworkEhCOS.EntityListResponse)
+}
+@objc @_inheritsConvenienceInitializers public class ReceiversTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var title: UIKit.UILabel!
+  @objc @IBOutlet weak public var receiversText: UIKit.UILabel!
+  @objc @IBOutlet weak public var accessorButton: UIKit.UIButton!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class ProfileListViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var labelTible: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelSubtitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var emptyView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var emptyImage: UIKit.UIImageView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_inheritsConvenienceInitializers public class RedirectPasswordChangeViewController : UIKit.UIViewController {
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ConferenceNMMessageTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var leftAvatarImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var rightAvatarImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var heightLeftAvatar: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var heightRightAvatar: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var viewBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var messageLabel: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension UIApplication {
+  public class func topViewController(base: UIKit.UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIKit.UIViewController?
+}
+open class BalloonMarker : Charts.MarkerImage {
+  open var color: UIKit.UIColor
+  open var arrowSize: CoreGraphics.CGSize
+  open var font: UIKit.UIFont
+  open var textColor: UIKit.UIColor
+  open var insets: UIKit.UIEdgeInsets
+  open var minimumSize: CoreGraphics.CGSize
+  public init(color: UIKit.UIColor, font: UIKit.UIFont, textColor: UIKit.UIColor, insets: UIKit.UIEdgeInsets)
+  @objc override open func offsetForDrawing(atPoint point: CoreGraphics.CGPoint) -> CoreGraphics.CGPoint
+  @objc override open func draw(context: CoreGraphics.CGContext, point: CoreGraphics.CGPoint)
+  open func setLabel(_ newLabel: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMNewTypeAndDateViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var sessionOrPresentationLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var presentationLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var sessionLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var sessionButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var presentationButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var dateTextField: UIKit.UITextField!
+  @objc @IBOutlet weak public var startHourTextField: UIKit.UITextField!
+  @objc @IBOutlet weak public var endHourTextField: UIKit.UITextField!
+  @objc @IBOutlet weak public var nextButton: FrameworkEhCOS.CustomNextButton!
+  @objc @IBOutlet weak public var nextButtonView: UIKit.UIView!
+  @objc @IBOutlet weak public var stackRadioButtons: UIKit.UIStackView!
+  @objc @IBOutlet weak public var heightStackRadioButtons: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var viewTextFiledDate: UIKit.UIView!
+  @objc @IBOutlet weak public var viewStartHour: UIKit.UIView!
+  @objc @IBOutlet weak public var viewEndHour: UIKit.UIView!
+  public var currentTextField: UIKit.UITextField?
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension ConferenceNMNewTypeAndDateViewController : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@objc @_hasMissingDesignatedInitializers public class CallingViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var endCallButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var outgoingView: UIKit.UIView!
+  @objc @IBOutlet weak public var labelInfo: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@_hasMissingDesignatedInitializers final public class saveUsersDataChat {
+  final public class func saveMessageDataUserDefault(userKey: Swift.String, userId: Swift.String, username: Swift.String, typeMessage: Swift.String, timestamp: Swift.String, text: Swift.String, actUsername: Swift.String)
+  final public class func chatMessageKeyDefault(_ Key: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CalendarPresenter : ObjectiveC.NSObject {
+  public func updateView()
+  public func setUpView()
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class ConferenceNMUserListTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var cellView: UIKit.UIView!
+  @objc @IBOutlet weak public var userImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var checkbox: FrameworkEhCOS.CheckBox!
+  @objc override dynamic public func awakeFromNib()
+  public func configureCell()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers final public class AssignationUserTableView : ObjectiveC.NSObject, UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_hasMissingDesignatedInitializers public class LoginRouter {
+  public static var isEmbeddedInTheApp: Swift.Bool
+  public class func createModule(isEmbeddedInApp: Swift.Bool = false, comesFromLogout: Swift.Bool = false) -> UIKit.UIViewController
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class MenuViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var containerView: UIKit.UIView!
+  @objc @IBOutlet weak public var optionsTableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var closeButton: UIKit.UIButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension MenuViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+@objc @_hasMissingDesignatedInitializers public class HomeViewController : UIKit.UIViewController {
+  public var nameIdentity: Swift.String
+  @objc @IBOutlet weak public var segmentedControl: UIKit.UISegmentedControl!
+  @objc @IBOutlet weak public var bottomAction: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet weak public var containerView: UIKit.UIView!
+  @objc @IBOutlet weak public var welcomeTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var welcomeSubtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var welcomeView: UIKit.UIView!
+  @objc @IBOutlet weak public var globeButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var viewPhraseHome: UIKit.UIView!
+  @objc @IBOutlet weak public var labelPhraseHome: UIKit.UILabel!
+  @objc @IBOutlet weak public var stackPhraseHome: UIKit.UIStackView!
+  @objc @IBOutlet weak public var viewPhraseAppointment: UIKit.UIView!
+  @objc @IBOutlet weak public var labelPhraseAppointment: UIKit.UILabel!
+  @objc @IBOutlet weak public var stackPhraseAppointment: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackPhrase: UIKit.UIStackView!
+  @objc @IBOutlet weak public var phraseLayoutConstraint: UIKit.NSLayoutConstraint!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SettingsManager {
+  final public let KEY_API_ENDPOINT: Swift.String
+  final public let KEY_URL_ROOM_SERVER: Swift.String
+  final public let KEY_URL_STUN: Swift.String
+  final public let KEY_URL_VIDEO_NM: Swift.String
+  final public let KEY_URL_VIDEO_NM_I2CAT: Swift.String
+  final public let KEY_FIREBASE_TOKEN: Swift.String
+  final public let KEY_HOME_ENABLE: Swift.String
+  final public let KEY_HOME_TITLE: Swift.String
+  final public let KEY_HOME_MESSAGE: Swift.String
+  final public let KEY_HOME_MESSAGE_ES: Swift.String
+  final public let KEY_HOME_MESSAGE_EN: Swift.String
+  final public let KEY_HOME_MESSAGE_CA: Swift.String
+  final public let KEY_HOME_MESSAGE_PT: Swift.String
+  final public let KEY_HOME_MESSAGE_DE: Swift.String
+  final public let KEY_HOME_TITLE_ES: Swift.String
+  final public let KEY_HOME_TITLE_EN: Swift.String
+  final public let KEY_HOME_TITLE_CA: Swift.String
+  final public let KEY_HOME_TITLE_PT: Swift.String
+  final public let KEY_HOME_TITLE_DE: Swift.String
+  final public let KEY_ENTITY_SELECTED: Swift.String
+  final public let KEY_ENTITY_CODE: Swift.String
+  final public let KEY_ENTITY_NAME: Swift.String
+  final public let KEY_ENTITY_LOGO: Swift.String
+  final public let KEY_APP_ENTITY_CODE: Swift.String
+  final public let KEY_COLOR_PRIMARY: Swift.String
+  final public let KEY_COLOR_SECUNDARY: Swift.String
+  final public let KEY_DISABLE_BACK: Swift.String
+  final public let KEY_LANGUAGE: Swift.String
+  final public let KEY_VIDEO_CALL_SYSTEM: Swift.String
+  final public let KEY_VERSION_UPDATE: Swift.String
+  final public let KEY_BADGE_GENERIC: Swift.String
+  final public let KEY_USERNAME: Swift.String
+  final public let KEY_PASSWORD: Swift.String
+  final public let KEY_SAVE_CREDENTIALS: Swift.String
+  final public let KEY_ENITY_S: Swift.String
+  final public let KEY_VALIDATE_SESSION: Swift.String
+  final public let KEY_APP_ENTITY: Swift.String
+  final public let KEY_VALIDATE_CHECK: Swift.String
+  final public let KEY_USER_GENDER: Swift.String
+  final public let KEY_USER_BIRTHDATE: Swift.String
+  final public let KEY_STORYBOARD_NAME: Swift.String
+  final public let KEY_VIEWCONTROLLER_IDENTIFIER: Swift.String
+  final public let KEY_TUTORIZED_USER_ID: Swift.String
+  final public let KEY_TYPE_USER_TUTOR: Swift.String
+  final public let KEY_TYPE_USER_TUTOR_TOKEN: Swift.String
+  public var urlVideoNM: Swift.String {
+    get
+    set
+  }
+  public var urlVideoNMi2cat: Swift.String {
+    get
+    set
+  }
+  public var videoCallSystem: Swift.String {
+    get
+    set
+  }
+  public var versionUpdate: Swift.Bool {
+    get
+    set
+  }
+  public var badgeGeneric: Swift.Bool {
+    get
+    set
+  }
+  public var username: Swift.String {
+    get
+    set
+  }
+  public var password: Swift.String {
+    get
+    set
+  }
+  public var saveCredentiales: Swift.Bool {
+    get
+    set
+  }
+  public var entity: Swift.String {
+    get
+    set
+  }
+  public var validateSession: Swift.Bool {
+    get
+    set
+  }
+  public var appEntityCodeChangePassword: Swift.String {
+    get
+    set
+  }
+  public var userGender: Swift.String {
+    get
+    set
+  }
+  public var userBirthdate: Swift.String {
+    get
+    set
+  }
+  public var storyboardName: Swift.String {
+    get
+    set
+  }
+  public var viewControllerIdentifier: Swift.String {
+    get
+    set
+  }
+  @objc deinit
+}
+public struct EntityListResponse : FrameworkEhCOS.ResultCode, Swift.Codable {
+  public var resultCode: Swift.String?
+  public var resultDescription: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct EntityListJSONResponse : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct EntityList : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct EntityListFilter : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @_inheritsConvenienceInitializers public class EntityAlertViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var textTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var closeButton: FrameworkEhCOS.HCRGenericButton!
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class IncomingViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var toCatchButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var labelInfo: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class AssignationUsersListViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var genericButton: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subtitleLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class EmailDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var attachmentsCollectionView: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var emailHistoryTableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var toolbarHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var attachmentCollectionHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var bottomTableTopBottomToolBar: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var replyBarButtonItem: UIKit.UIBarButtonItem!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension EmailDetailViewController : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+@objc @_inheritsConvenienceInitializers public class InfoHealthTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var titleLbl: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateLbl: UIKit.UILabel!
+  @objc @IBOutlet weak public var cellView: UIKit.UIView!
+  @objc @IBOutlet weak public var itemTypeImageView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var imageViewContentLabel: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@_hasMissingDesignatedInitializers public class ConferenceNMRouter {
+  public static func createModule(profesionalName: Swift.String, url: Swift.String) -> UIKit.UIViewController
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class SupportViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var textTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var textDescription: UIKit.UILabel!
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class InfoHealthInsertNewTableCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var infoLbl: UIKit.UILabel!
+  @objc @IBOutlet weak public var introTextField: UIKit.UITextField!
+  @objc @IBOutlet weak public var receiversButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var infoLblWidth: UIKit.NSLayoutConstraint!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class GamificationResultViewController : UIKit.UIViewController {
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class CustomTriajeNextButton : UIKit.UIButton {
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc @_inheritsConvenienceInitializers public class ProfileTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var imageProfile: UIKit.UIImageView!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public enum InfoClinicData {
+  case n1_problem
+  case n2_treatment
+  case n3_allergy
+  case n4_alerts
+  case n5_background
+  public static func == (a: FrameworkEhCOS.InfoClinicData, b: FrameworkEhCOS.InfoClinicData) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc @_hasMissingDesignatedInitializers public class ClinicalProblems : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc @IBOutlet weak public var lbl_title: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonClose: UIKit.UIButton!
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var mView: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class DateVitalSign {
+  final public class func fullDate() -> Swift.String
+  final public class func year() -> Swift.String
+  final public class func monthM() -> Swift.String
+  final public class func day() -> Swift.String
+  final public class func currentTime() -> Swift.String
+  final public class func minute() -> Swift.String
+  final public class func systemFullDateS() -> Swift.String
+  @objc deinit
+}
+@objc public class NavigationBar : UIKit.UIView {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var leftButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonsTop: UIKit.NSLayoutConstraint!
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public func layoutSubviews()
+  @objc override dynamic public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@objc @_hasMissingDesignatedInitializers public class StateViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension StateViewController {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension StateViewController : UIKit.UISearchBarDelegate {
+  @objc dynamic public func searchBarCancelButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @objc dynamic public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers public class VideoconferenceTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var titleLbl: UIKit.UILabel!
+  @objc @IBOutlet weak public var subtitleLbl: UIKit.UILabel!
+  @objc @IBOutlet weak public var cellView: UIKit.UIView!
+  @objc @IBOutlet weak public var cellViewUser: UIKit.UIView!
+  @objc @IBOutlet weak public var userImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var accessorImageView: UIKit.UIImageView!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class GamificationsListViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var selectGamificationsLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var pendingOrFinishedSegmentedControl: UIKit.UISegmentedControl!
+  @objc @IBOutlet weak public var assignedOrFinishedLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var assignedOrFinishedNumberLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var gamificationTableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var emptyView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@_inheritsConvenienceInitializers @objc public class KeyboardDismissingView : UIKit.UIView {
+  public var dismissingBlock: (() -> Swift.Void)?
+  public var touchEndedBlock: (() -> Swift.Void)?
+  @objc override dynamic public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @discardableResult
+  public class func resignAnyFirstResponder(_ view: UIKit.UIView) -> Swift.Bool
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class ChangePasswordViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var userTextField: FrameworkEhCOS.HCRGenericTextField!
+  @objc @IBOutlet weak public var subtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var currentPassTextField: FrameworkEhCOS.HCRGenericTextField!
+  @objc @IBOutlet weak public var newPassTextField: FrameworkEhCOS.HCRGenericTextField!
+  @objc @IBOutlet weak public var confirmPassTextField: FrameworkEhCOS.HCRGenericTextField!
+  @objc @IBOutlet weak public var infoOneLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var infoTwoLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var showCurrentPassButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var showNewPassButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var showConfirmPassButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var contentView: UIKit.UIView!
+  @objc @IBOutlet weak public var confirmButton: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet weak public var backButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var containterDataView: UIKit.UIView!
+  @objc @IBOutlet weak public var imageEhCOS: UIKit.UIImageView!
+  public var tutorTutorizedPopoverViewController: FrameworkEhCOS.TutorTutorizedPopoverViewController?
+  public var isCommingFromLogout: Swift.Bool
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ChangePasswordViewController {
+  public func setTutorTutorizedPopoverController(response: FrameworkEhCOS.LoginResponse)
+}
+extension ChangePasswordViewController : UIKit.UIPopoverPresentationControllerDelegate {
+  @objc dynamic public func adaptivePresentationStyle(for controller: UIKit.UIPresentationController) -> UIKit.UIModalPresentationStyle
+  @objc dynamic public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+  @objc dynamic public func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class DeviceCurrentLanguage {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class PollAssignationListViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var segmentedControl: UIKit.UISegmentedControl!
+  @objc @IBOutlet weak public var pendingOrFinishedSegmentedControl: UIKit.UISegmentedControl!
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var segmentedControlHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var numberOfPollsLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelHeader: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension UIAlertController {
+  public func showInfoAlert(view: UIKit.UIViewController? = UIApplication.topViewController(), title: Swift.String, message: Swift.String, finishAction: (() -> Swift.Void)? = nil)
+  public enum QuestionType {
+    case destructive, normal
+    public static func == (a: UIKit.UIAlertController.QuestionType, b: UIKit.UIAlertController.QuestionType) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public func askQuestion(title: Swift.String, question: Swift.String, type: UIKit.UIAlertController.QuestionType = .destructive, completion: @escaping () -> Swift.Void)
+  public func askBetweenOptions(title: Swift.String, question: Swift.String, destructiveButtonTitle: Swift.String, saveButtonTitle: Swift.String, deleteDraft destructiveCompletion: @escaping () -> Swift.Void, saveDraft saveCompletion: @escaping () -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers public class NewAppointmentViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var subjectTextView: UIKit.UITextView!
+  @objc @IBOutlet weak public var groupLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var groupPickerView: UIKit.UIDatePicker!
+  @objc @IBOutlet weak public var patientLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var patientPickerView: UIKit.UIDatePicker!
+  @objc @IBOutlet weak public var reasonLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var newAppointmentButton: UIKit.UIButton!
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class CustomNextButton : UIKit.UIButton {
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+}
+@_hasMissingDesignatedInitializers public class ChatRouter {
+  public static func createModule(data: FrameworkEhCOS.ChatUserStateInformation) -> UIKit.UIViewController
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class TitleSubtitleTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet public var subtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet public var titleLabel: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMSafariViewController : UIKit.UIViewController {
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_inheritsConvenienceInitializers public class AppointmentTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var infoSubtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var infoTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var hoursLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var monthLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dayLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateBoxView: UIKit.UIView!
+  @objc @IBOutlet weak public var calendarImage: UIKit.UIImageView!
+  @objc @IBOutlet weak public var accessorImageView: UIKit.UIImageView!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension String {
+  public func localized(bundle: Foundation.Bundle = Bundle(identifier: "everis.FrameworkEhCOS")!, tableName: Swift.String = "LocalizablePrivate") -> Swift.String
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMSessionViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var camareImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var nameTextField: FrameworkEhCOS.HCRGenericTextField!
+  @objc @IBOutlet weak public var headerLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var headerBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var collectionView: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var roomConferenceButton: FrameworkEhCOS.CustomNextButton!
+  @objc @IBOutlet weak public var roomConferenceBackground: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension ConferenceNMSessionViewController : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+}
+extension ConferenceNMSessionViewController : UIKit.UICollectionViewDataSource {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension ConferenceNMSessionViewController : UIKit.UICollectionViewDelegate {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForHeaderInSection section: Swift.Int) -> CoreGraphics.CGSize
+}
+extension ConferenceNMSessionViewController : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+extension ConferenceNMSessionViewController {
+  public func buttonDeleteClicked(_ id: Swift.Int)
+}
+@objc @_hasMissingDesignatedInitializers public class PollViewController : UIKit.UIViewController, UIKit.UIAdaptivePresentationControllerDelegate {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var progressTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var progressCounterLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var progressBar: UIKit.UIProgressView!
+  @objc @IBOutlet weak public var nextBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var nextButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var progressView: UIKit.UIView!
+  @objc @IBOutlet weak public var assignLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var assignNameLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var topInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var topInfoStackView: UIKit.UIStackView!
+  @objc @IBOutlet weak public var previousButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var heightProgressConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var heightButtosConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var heightViewConstraint: UIKit.NSLayoutConstraint!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc public func adaptivePresentationStyle(for controller: UIKit.UIPresentationController) -> UIKit.UIModalPresentationStyle
+  @objc public func adaptivePresentationStyle(for controller: UIKit.UIPresentationController, traitCollection: UIKit.UITraitCollection) -> UIKit.UIModalPresentationStyle
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMRoomViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var camareImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var legendLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var videoButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var soundButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var headerLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var headerBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var collectionView: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var infoLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var infoBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var callConferenceButton: FrameworkEhCOS.CustomNextButton!
+  @objc @IBOutlet weak public var callConferenceBackground: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc @IBAction public func callConferenceAction(_ sender: Any)
+  @objc @IBAction public func videoAction(_ sender: Any)
+  @objc @IBAction public func soundAction(_ sender: Any)
+  public func configureView()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension ConferenceNMRoomViewController : UIKit.UICollectionViewDataSource {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension ConferenceNMRoomViewController : UIKit.UICollectionViewDelegate {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForHeaderInSection section: Swift.Int) -> CoreGraphics.CGSize
+}
+extension ConferenceNMRoomViewController : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+extension ConferenceNMRoomViewController {
+  public func buttonDeleteClicked(_ id: Swift.Int)
+}
+@objc @_inheritsConvenienceInitializers public class VideoCallViewController : UIKit.UIViewController {
+  @objc override dynamic public func loadView()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension VideoCallViewController : FrameworkEhCOS.ARDVideoCallViewDelegate {
+  @objc dynamic public func videoCallViewDidSwitchCamera(_ view: FrameworkEhCOS.ARDVideoCallView!)
+  @objc dynamic public func videoCallViewDidHangup(_ view: FrameworkEhCOS.ARDVideoCallView!)
+}
+extension VideoCallViewController : WebRTC.RTCAudioSessionDelegate {
+}
+extension VideoCallViewController : FrameworkEhCOS.ARDAppClientDelegate {
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didGetStats stats: [Any]!)
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didChange state: FrameworkEhCOS.ARDAppClientState)
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didChange state: WebRTC.RTCIceConnectionState)
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didCreateLocalCapturer localCapturer: WebRTC.RTCCameraVideoCapturer!)
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didReceiveLocalVideoTrack localVideoTrack: WebRTC.RTCVideoTrack!)
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didReceiveRemoteVideoTrack remoteVideoTrack: WebRTC.RTCVideoTrack!)
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didError error: Swift.Error!)
+  @objc dynamic public func appClient(_ client: FrameworkEhCOS.ARDAppClient!, didCreateLocalFileCapturer fileCapturer: WebRTC.RTCFileVideoCapturer!)
+}
+public protocol LoginPresenterToViewProtocol : AnyObject {
+  var logoContraint: UIKit.NSLayoutConstraint! { get set }
+  var username: FrameworkEhCOS.HCRGenericTextField! { get set }
+  var password: FrameworkEhCOS.HCRGenericTextField! { get set }
+  var loginButton: FrameworkEhCOS.HCRGenericButton! { get set }
+  var activeEntityButton: FrameworkEhCOS.HCRGenericButton! { get set }
+  var saveCredentiales: FrameworkEhCOS.CheckBox! { get set }
+  var labelSaveCredentiales: UIKit.UILabel! { get set }
+  var selectEntityView: UIKit.UIStackView! { get set }
+  var selectEntityButton: UIKit.UIButton! { get set }
+  var titleLabel: UIKit.UILabel! { get set }
+  var subtitleLabel: UIKit.UILabel! { get set }
+  var titleImageView: UIKit.UIImageView! { get set }
+  var buttonBack: FrameworkEhCOS.HCRGenericButton! { get set }
+  var isCommingFromLogout: Swift.Bool { get set }
+  var rememberPasswordButton: UIKit.UIButton! { get set }
+  var technicalSupportButton: UIKit.UIButton! { get set }
+  var noCredentialsInfoLabel: UIKit.UILabel! { get set }
+  var viewButtonConstraint: UIKit.NSLayoutConstraint! { get set }
+  var tutorTutorizedPopoverViewController: FrameworkEhCOS.TutorTutorizedPopoverViewController? { get set }
+  func setTutorTutorizedPopoverController(response: FrameworkEhCOS.LoginResponse)
+  func dismissTutorTutorizedPopover()
+  func showOnlyTutorCanAccess()
+  func showSupportDialog()
+  func showForgotPasswordDialog()
+  func showForgotPasswordDialogPopup()
+  func goChangePassword()
+  func loadEntities(with array: [FrameworkEhCOS.EntityList])
+  func loadEntitiesFilter(with fireb: [FrameworkEhCOS.EntityListFilter])
+  func loadEntities(with array: [FrameworkEhCOS.EntityList], version: Swift.String)
+}
+@objc @_hasMissingDesignatedInitializers public class TimeLineViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableViewTimeLine: UIKit.UITableView!
+  @objc @IBOutlet weak public var lbl_administrative_digital: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_clinical_activity: UIKit.UILabel!
+  @objc @IBOutlet weak public var viewEmptyList: UIKit.UIView!
+  @objc @IBOutlet weak public var lbl_info: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class AppointmentDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var editAppointmentButton: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet public var deleteAppointmentButton: UIKit.UIButton!
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnCall: UIKit.UIButton!
+  @objc @IBOutlet weak public var labelCall: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDelete: UIKit.UILabel!
+  @objc @IBOutlet weak public var viewDetail: UIKit.UIView!
+  @objc @IBOutlet weak public var stackCall: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackDelete: UIKit.UIStackView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMChatViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var viewBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var messageTextField: UIKit.UITextField!
+  @objc @IBOutlet weak public var sendMessageButton: UIKit.UIButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc @IBAction public func sendMessageAction(_ sender: Any)
+  public func configureView()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ConferenceNMChatViewController : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension ConferenceNMChatViewController : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+}
+@_hasMissingDesignatedInitializers public class GamificationResultRouter {
+  public class func createModule(formAssignId: Swift.Int, title: Swift.String?, creationDate: Swift.Int?, pending: Swift.Bool, scoreDescription: Swift.String?, scoreValue: Swift.Int?) -> UIKit.UIViewController
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class ChartsVitalSignsViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @objc @IBOutlet weak public var labelDateRange: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonDropdown: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonArrowDropdown: UIKit.UIButton!
+  @objc @IBOutlet weak public var labelBloodPressure: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelPulse: UIKit.UILabel!
+  @objc @IBOutlet weak public var viewBloodPressure: Charts.LineChartView!
+  @objc @IBOutlet weak public var viewPulse: Charts.LineChartView!
+  @objc @IBOutlet weak public var selectEntityView: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackDate: UIKit.UIStackView!
+  @objc @IBOutlet weak public var viewDateContainer: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var textFieldOffset: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldLimit: UIKit.UITextField!
+  @objc @IBOutlet weak public var BloodPressureChartStack: UIKit.UIStackView!
+  @objc @IBOutlet weak public var PulseStack: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackEmpty: UIKit.UIStackView!
+  @objc @IBOutlet weak public var emptyViewImage: UIKit.UIView!
+  @objc @IBOutlet weak public var labelEmpty: UIKit.UILabel!
+  @objc @IBOutlet weak public var viewContainerEmpty: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class VitalSignViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableViewVital: UIKit.UITableView!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var labelInfo: UIKit.UILabel!
+  @objc @IBOutlet weak public var viewInformation: UIKit.UIView!
+  @objc @IBOutlet weak public var labelAssociatedDevices: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class ProfileTHSViewController : UIKit.UIViewController, UIKit.UINavigationControllerDelegate, UIKit.UIImagePickerControllerDelegate {
+  @objc @IBOutlet weak public var backgroundImage: UIKit.UIImageView!
+  @objc @IBOutlet weak public var IconEmailProf: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconLocationProf: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconEstetoscopio: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconCheck: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconClose: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconPlanned: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconNotification: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconContact: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconTimeLine: UIKit.UIImageView!
+  @objc @IBOutlet weak public var imageProfile: UIKit.UIImageView!
+  @objc @IBOutlet weak public var buttonImage: UIKit.UIButton!
+  @objc @IBOutlet weak public var viewLocationEmail: UIKit.UIView!
+  @objc @IBOutlet weak public var viewClinicInformation: UIKit.UIView!
+  @objc @IBOutlet weak public var viewServiActive: UIKit.UIView!
+  @objc @IBOutlet weak public var viewDigitalInactiveService: UIKit.UIView!
+  @objc @IBOutlet weak public var viewPlannedActivity: UIKit.UIView!
+  @objc @IBOutlet weak public var viewNotification: UIKit.UIView!
+  @objc @IBOutlet weak public var viewAddress: UIKit.UIView!
+  @objc @IBOutlet weak public var viewContainerAddress: UIKit.UIView!
+  @objc @IBOutlet weak public var viewTimeline: UIKit.UIView!
+  @objc @IBOutlet weak public var viewLineProfileLocation: UIKit.UIView!
+  @objc @IBOutlet weak public var buttonClose: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonCloseNotif: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonCloseAddress: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonNextTimeLine: UIKit.UIButton!
+  @objc @IBOutlet weak public var timeLineArrowButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var lbl_name_profile: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_age: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_email: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_location: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_clinic_information: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_time_info: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_update: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_activ_problem: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_active_treatment: UIKit.UILabel!
+  @objc @IBOutlet weak public var label_allergies: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_alerts: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_background: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_active_digital_serv: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_inactive_digital_serv: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_planned_activity: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_reminder_notif: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_Problem: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_Treatment: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_allerg: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_alert: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_backgro: UIKit.UILabel!
+  @objc @IBOutlet weak public var btnSeeMoreProblem: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnSeeTreatment: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnSeeMoreAlert: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnSeeMoreAllergie: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnSeeMoreBackground: UIKit.UIButton!
+  @objc @IBOutlet weak public var iconAllergie: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconProblemAct: UIKit.UIImageView!
+  @objc @IBOutlet weak public var viewEmptyProblems: UIKit.UIView!
+  @objc @IBOutlet weak public var viewEmptyTreatment: UIKit.UIView!
+  @objc @IBOutlet weak public var viewEmptyAllergy: UIKit.UIView!
+  @objc @IBOutlet weak public var viewEmptyAlert: UIKit.UIView!
+  @objc @IBOutlet weak public var viewEmptyBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var lbl_emptyNotificacion: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_emptyAddress: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_contact_address: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_empty_digitalService: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_empty_digitalServiceInactive: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_emptyPlanned: UIKit.UILabel!
+  @objc @IBOutlet weak public var stackAlert: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackProblems: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackTreatments: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackAllergies: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackBackground: UIKit.UIStackView!
+  @objc @IBOutlet weak public var stackEmptyInfoClinic: UIKit.UIStackView!
+  @objc @IBOutlet weak public var viewInfoProblems: UIKit.UIView!
+  @objc @IBOutlet weak public var viewInfoTreatment: UIKit.UIView!
+  @objc @IBOutlet weak public var viewInfoAllergy: UIKit.UIView!
+  @objc @IBOutlet weak public var viewInfoAlert: UIKit.UIView!
+  @objc @IBOutlet weak public var viewInfoBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var lbl_empty_activeProblems: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_emptyTreatment: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_empty_allergies: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_empty_alerts: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_empty_background: UIKit.UILabel!
+  @objc @IBOutlet weak public var lbl_empty_infoClinic: UIKit.UILabel!
+  @objc @IBOutlet weak public var ViewPlannedActivityHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var viewNotificationHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var viewAddressHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var collectionViewServActiv: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var collectionViewServInactiv: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var collectionViewPlannetActiv: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var collectionViewNotification: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var tableViewAddress: UIKit.UITableView!
+  @objc @IBOutlet weak public var collectionViewProblem: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var viewCollectProblem: UIKit.UIView!
+  @objc @IBOutlet weak public var collectionViewAllergy: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var viewCollectAllergy: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ProfileTHSViewController : UIKit.UICollectionViewDataSource {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension ProfileTHSViewController : UIKit.UICollectionViewDelegate {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+extension ProfileTHSViewController : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BurguerMenuView : UIKit.UIView {
+  public static var nibName: Swift.String {
+    get
+  }
+  public func commonInit()
+  public func reloadData()
+  @objc deinit
+}
+extension BurguerMenuView : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGFloat
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc @_inheritsConvenienceInitializers public class InboxTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var inboxIcon: UIKit.UIImageView!
+  @objc @IBOutlet weak public var inboxName: UIKit.UILabel!
+  @objc @IBOutlet weak public var unreadEmailsNum: UIKit.UILabel!
+  @objc @IBOutlet weak public var accesorImage: UIKit.UIImageView!
+  @objc @IBOutlet weak public var inboxNameConstraintLayout: UIKit.NSLayoutConstraint!
+  public var emailNumber: Swift.Int {
+    get
+    set
+  }
+  public static var cellType: Swift.String {
+    get
+  }
+  @objc override dynamic public func awakeFromNib()
+  public func display(_ title: Swift.String, with img: UIKit.UIImage)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class EmailLoadingTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var activityLoad: UIKit.UIActivityIndicatorView!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class EmailComposerViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var emailComposerNavigationBar: UIKit.UINavigationBar!
+  @objc @IBOutlet weak public var emailComposerNavigationItem: UIKit.UINavigationItem!
+  @objc @IBOutlet weak public var receiversView: UIKit.UIView!
+  @objc @IBOutlet weak public var receiversTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var receiversContent: UIKit.UILabel!
+  @objc @IBOutlet weak public var lineUnderReceiversView: UIKit.UIView!
+  @objc @IBOutlet weak public var subjectView: UIKit.UIView!
+  @objc @IBOutlet weak public var subjectTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var subjectContent: UIKit.UITextView!
+  @objc @IBOutlet weak public var labelContents: UIKit.UILabel!
+  @objc @IBOutlet weak public var lineUnderSubjectView: UIKit.UIView!
+  @objc @IBOutlet public var cancelButton: UIKit.UIBarButtonItem!
+  @objc @IBOutlet public var sendButton: UIKit.UIBarButtonItem!
+  @objc @IBOutlet weak public var contentText: UIKit.UITextView!
+  @objc @IBOutlet weak public var attachmentCollection: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var collectionHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var actionBarBottomConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var actionToolbar: UIKit.UIToolbar!
+  @objc @IBOutlet weak public var addBarButtonItem: UIKit.UIBarButtonItem!
+  @objc @IBOutlet public var addImageBarButtonItem: UIKit.UIBarButtonItem!
+  @objc @IBOutlet weak public var emailComposerScrollView: UIKit.UIScrollView!
+  @objc @IBOutlet weak public var accesorButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var lineAbovePreviousMailView: UIKit.UIView!
+  @objc @IBOutlet weak public var previousMailView: UIKit.UIView!
+  @objc @IBOutlet weak public var fromTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var fromLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var toTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var toLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var receiversLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subjectTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subjectLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var previousEmailContentTextView: UIKit.UITextView!
+  @objc @IBOutlet weak public var emailContentHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func dismissKeyboard()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension EmailComposerViewController : UIKit.UITextViewDelegate {
+  @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+}
+@objc @_hasMissingDesignatedInitializers public class InboxFoldersViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var navigationBar: UIKit.UINavigationItem!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension UIViewController {
+  public func hideKeyboardWhenTappedAround()
+  @objc dynamic public func dismissKeyboard()
+}
+@objc @_inheritsConvenienceInitializers public class EmailTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var toLabel: UIKit.UILabel!
+  @objc @IBOutlet public var dateLabel: UIKit.UILabel!
+  @objc @IBOutlet public var subjectLabel: UIKit.UILabel!
+  @objc @IBOutlet public var fromLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var readMark: UIKit.UIView!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class ReportTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var authorLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var authorText: UIKit.UILabel!
+  @objc @IBOutlet weak public var specialityLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var specialityText: UIKit.UILabel!
+  @objc @IBOutlet weak public var typeText: UIKit.UILabel!
+  @objc @IBOutlet weak public var typeLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateText: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class ReportDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var noReportAvailableView: UIKit.UIView!
+  @objc @IBOutlet weak public var noReportAvailableLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class HomePresenter {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class ReportsListViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var reportsTable: UIKit.UITableView!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension UIDevice {
+  public var iPhone_X: Swift.Bool {
+    get
+  }
+  public var iPhone_: Swift.Bool {
+    get
+  }
+  public enum ScreenType : Swift.String {
+    case iPhone4_4S
+    case iPhones_5_5s_5c_SE
+    case iPhones_6_6s_7_8
+    case iPhones_6Plus_6sPlus_7Plus_8Plus
+    case iPhoneXR
+    case iPhoneX_iPhoneXS
+    case iPhoneXSMax
+    case unknown
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+  }
+  public var screenType: UIKit.UIDevice.ScreenType {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class PollUserTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var contentDataView: UIKit.UIView!
+  @objc @IBOutlet weak public var userLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var checkButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var radioButton: UIKit.UIButton!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  public func isSelected(_ selected: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class DateTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet public var hoursLabel: UIKit.UILabel!
+  @objc @IBOutlet public var dateTitleLabel: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class TriajeViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var nextButton: FrameworkEhCOS.CustomTriajeNextButton!
+  @objc @IBOutlet weak public var nextBackground: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension TriajeViewController : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  public func configureCell(row: Swift.Int) -> UIKit.UITableViewCell
+}
+@objc @_hasMissingDesignatedInitializers public class CalendarViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var subtitleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var calendarView: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_inheritsConvenienceInitializers public class InfoHealthDetailExtTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var infoTextView: UIKit.UITextView!
+  @objc @IBOutlet weak public var infoLabel: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public struct LibConfig {
+  public init(entitySelected: Swift.Bool = false, imageLogo: Swift.String = "", homeEnable: Swift.Bool = true, colorPrimary: Swift.String = "#129234", colorSecundary: Swift.String = "#129234", disableBack: Swift.Bool = true)
+}
+@objc @_hasMissingDesignatedInitializers public class DetailTensiometerViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @objc @IBOutlet weak public var nameDevice: UIKit.UILabel!
+  @objc @IBOutlet weak public var imageDevice: UIKit.UIImageView!
+  @objc @IBOutlet weak public var textFieldSistolica: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldDiastolica: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldFC: UIKit.UITextField!
+  @objc @IBOutlet weak public var ButtonConfirmT: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonSend: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonCancel: UIKit.UIButton!
+  @objc @IBOutlet weak public var labelSistolica: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDiastolica: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelFC: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDateConfirm: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelHeaderSistolic: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelheaderDiastolic: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelHeaderFC: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class VideoconferenceViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ConferenceNMVideoCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet weak public var viewBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var avatarImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var microfonoImagenView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var nameUserLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var optionButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var backgroundOptionButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var optionBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var silenceButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var expelButton: UIKit.UIButton!
+  @objc override dynamic public func awakeFromNib()
+  @objc @IBAction public func optionAction(_ sender: Any)
+  @objc @IBAction public func backgroundOptionAction(_ sender: Any)
+  @objc @IBAction public func silenceAction(_ sender: Any)
+  @objc @IBAction public func expelAction(_ sender: Any)
+  public func configureCell()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class AssignationsViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet public var titleLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension AssignationsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@_hasMissingDesignatedInitializers public class AppointmentPresenter {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class EmailViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet public var composeBarButtonItem: UIKit.UIBarButtonItem!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  public var isFetchInProgress: Swift.Bool
+  public var hasToReloadEmails: Swift.Bool
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension EmailViewController : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, canEditRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+}
+extension EmailViewController : UIKit.UITableViewDataSourcePrefetching {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, prefetchRowsAt indexPaths: [Foundation.IndexPath])
+}
+extension EmailViewController : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, editActionsForRowAt indexPath: Foundation.IndexPath) -> [UIKit.UITableViewRowAction]?
+}
+extension EmailViewController {
+  public var moveAction: UIKit.UITableViewRowAction {
+    get
+  }
+  public var deleteAction: UIKit.UITableViewRowAction {
+    get
+  }
+  public func readcell()
+  public func removeCell()
+}
+public struct ChatContactListResponse : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ChatUsersGroupsList : Swift.Codable {
+  public init(identifier: Swift.Int?, fullName: Swift.String?, type: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ChatInformation : Swift.Codable {
+  public init(identifier: Swift.Int?, fullName: Swift.String, type: Swift.String?, typeMessage: Swift.String?, timestamp: Swift.Int, text: Swift.String?, actUsername: Swift.String?, userId: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ChatUserStateInformation : Swift.Codable {
+  public init(identifier: Swift.Int?, fullName: Swift.String, type: Swift.String?, typeMessage: Swift.String?, timestamp: Swift.Int, text: Swift.String?, actUsername: Swift.String?, userId: Swift.String?, stateSock: Swift.Bool?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @_hasMissingDesignatedInitializers public class TriajeBotViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var viewChatBot: UIKit.UIView!
+  @objc @IBOutlet weak public var closeChatbotButton: UIKit.UIButton!
+  final public let refreshControl: UIKit.UIRefreshControl
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension TriajeBotViewController : WebKit.WKNavigationDelegate {
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+}
+public struct GenericResponse : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum StoryboardPrivate : Swift.String {
+  case EnvironmentSelector
+  case Login
+  case TutorTutorizedPopover
+  public func instantiateViewController<T>() -> T where T : FrameworkEhCOS.StoryboardIdentifiable
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIStoryboard {
+  convenience public init(storyboard: FrameworkEhCOS.StoryboardPrivate, bundle: Foundation.Bundle? = nil)
+}
+extension UIViewController : FrameworkEhCOS.StoryboardIdentifiable {
+}
+public protocol StoryboardIdentifiable {
+  static var storyboardIdentifier: Swift.String { get }
+}
+extension StoryboardIdentifiable where Self : UIKit.UIViewController {
+  public static var storyboardIdentifier: Swift.String {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class InfoHealthViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var itemNumberLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonView: UIKit.UIView!
+  @objc @IBOutlet weak public var newInformationButton: UIKit.UIButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class TriajeQuestionViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var nextBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var nextButton: FrameworkEhCOS.CustomTriajeNextButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class HistoryViewController : UIKit.UIViewController, UIKit.UIAdaptivePresentationControllerDelegate {
+  @objc @IBOutlet weak public var dateLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var stackPeso: UIKit.UIStackView!
+  @objc @IBOutlet weak public var weightNameLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var weightValueLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var weightMeasureUnitLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var stackSistolica: UIKit.UIStackView!
+  @objc @IBOutlet weak public var systolicPressureNameLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var systolicPressureValueLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var systolicPressureMeasureUnitLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var stackDiastolica: UIKit.UIStackView!
+  @objc @IBOutlet weak public var diastolicPressureNameLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var diastolicPressureValueLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var diastolicPressureMeasureUnit: UIKit.UILabel!
+  @objc @IBOutlet weak public var stackFC: UIKit.UIStackView!
+  @objc @IBOutlet weak public var heartRateNameLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var heartRateValueLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var heartRateMeasureUnitLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonSyncView: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonManualView: UIKit.UIButton!
+  @objc @IBOutlet weak public var deviceSyncView: UIKit.UIView!
+  @objc @IBOutlet weak public var manualSyncView: UIKit.UIView!
+  @objc @IBOutlet weak public var HistoryDataTableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var imageArrowBluetooth: UIKit.UIImageView!
+  @objc @IBOutlet weak public var imageArrowManual: UIKit.UIImageView!
+  @objc @IBOutlet weak public var labelTitleDescriptionBluetooth: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionBluetooth: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelTitleDescriptionManual: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionManual: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelHistorical: UIKit.UILabel!
+  @objc @IBOutlet weak public var emptyView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc public func adaptivePresentationStyle(for controller: UIKit.UIPresentationController) -> UIKit.UIModalPresentationStyle
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class TermsAndConditionsViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var legalNoticeLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var acceptButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var checkButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var acceptTermsLabel: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class SubjectTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var title: UIKit.UILabel!
+  @objc @IBOutlet weak public var textView: UIKit.UITextView!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension UIView {
+  public enum BorderSide {
+    case top, bottom, left, right
+    public static func == (a: UIKit.UIView.BorderSide, b: UIKit.UIView.BorderSide) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public func addBorder(side: UIKit.UIView.BorderSide, color: UIKit.UIColor, width: CoreGraphics.CGFloat)
+}
+@objc @_hasMissingDesignatedInitializers public class TriajeResultViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension TriajeResultViewController : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+@objc @_hasMissingDesignatedInitializers public class CallContainerViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var navigationBar: FrameworkEhCOS.NavigationBar!
+  @objc @IBOutlet weak public var navigationBarHeight: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var containerInCallView: UIKit.UIView!
+  @objc @IBOutlet weak public var containerPreCallView: UIKit.UIView!
+  public var isCaller: Swift.Bool
+  public var roomId: Swift.String?
+  public var callerId: Swift.String?
+  public var calleeId: Swift.String?
+  public var errorPer: Swift.Bool
+  public var calleeName: Swift.String?
+  public var callerName: Swift.String?
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public var traitCollection: UIKit.UITraitCollection {
+    @objc get
+  }
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class NavigationBarPrivate : UIKit.UINavigationController {
+  public var isEmbeddedInApp: Swift.Bool
+  @objc override dynamic public var viewControllers: [UIKit.UIViewController] {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public func setViewControllers(_ viewControllers: [UIKit.UIViewController], animated: Swift.Bool)
+  @objc override dynamic public func pushViewController(_ viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @objc override dynamic public func popViewController(animated: Swift.Bool) -> UIKit.UIViewController?
+  @available(iOS 5.0, *)
+  @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class deleteAppointments : UIKit.UIViewController {
+  @objc @IBOutlet weak public var labelTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelInformation: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonCancel: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonOk: UIKit.UIButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AttachmentCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet weak public var attachmentImage: UIKit.UIImageView!
+  @objc @IBOutlet weak public var title: UIKit.UILabel!
+  @objc @IBOutlet weak public var removeButton: UIKit.UIButton!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class CVCalendarViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var monthLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var menuView: CVCalendar.CVCalendarMenuView!
+  @objc @IBOutlet weak public var calendarView: CVCalendar.CVCalendarView!
+  @objc @IBOutlet weak public var leftSpace: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var rightSpace: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var labelSunday: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelMonday: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelTuesday: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelWednesday: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelThursday: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelFriday: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelSaturday: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension CVCalendarViewController : CVCalendar.CVCalendarViewDelegate, CVCalendar.CVCalendarMenuViewDelegate {
+  @objc dynamic public func dotMarker(moveOffsetOnDayView dayView: CVCalendar.DayView) -> CoreGraphics.CGFloat
+  @objc dynamic public func dotMarker(sizeOnDayView dayView: CVCalendar.DayView) -> CoreGraphics.CGFloat
+  @objc dynamic public func shouldShowWeekdaysOut() -> Swift.Bool
+  @objc dynamic public func presentationMode() -> CVCalendar.CalendarMode
+  @objc dynamic public func firstWeekday() -> CVCalendar.Weekday
+  @objc dynamic public func shouldAutoSelectDayOnMonthChange() -> Swift.Bool
+  @objc dynamic public func weekdaySymbolType() -> CVCalendar.WeekdaySymbolType
+  @objc dynamic public func presentedDateUpdated(_ date: CVCalendar.CVDate)
+  @objc dynamic public func dayOfWeekTextColor(by weekday: CVCalendar.Weekday) -> UIKit.UIColor
+  @objc dynamic public func latestSelectableDate() -> Foundation.Date
+  @objc dynamic public func dotMarker(shouldShowOnDayView dayView: CVCalendar.DayView) -> Swift.Bool
+  @objc dynamic public func didSelectDayView(_ dayView: CVCalendar.DayView, animationDidFinish: Swift.Bool)
+  @objc dynamic public func dotMarker(colorOnDayView dayView: CVCalendar.DayView) -> [UIKit.UIColor]
+}
+extension CalendarViewController : CVCalendar.CVCalendarViewAppearanceDelegate {
+  @objc dynamic public func dayLabelFont(by weekDay: CVCalendar.Weekday, status: CVCalendar.CVStatus, present: CVCalendar.CVPresent) -> UIKit.UIFont
+  @objc dynamic public func dayLabelColor(by weekDay: CVCalendar.Weekday, status: CVCalendar.CVStatus, present: CVCalendar.CVPresent) -> UIKit.UIColor?
+  @objc dynamic public func dayLabelBackgroundColor(by weekDay: CVCalendar.Weekday, status: CVCalendar.CVStatus, present: CVCalendar.CVPresent) -> UIKit.UIColor?
+}
+@objc @_hasMissingDesignatedInitializers public class TensiometerDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var labelIntroduction: UIKit.UILabel!
+  @objc @IBOutlet weak public var textFieldSistolica: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldDiastolica: UIKit.UITextField!
+  @objc @IBOutlet weak public var textFieldFC: UIKit.UITextField!
+  @objc @IBOutlet weak public var labelFailMessage: UIKit.UILabel!
+  @objc @IBOutlet weak public var btnSend: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnSincronization: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnDatamanual: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnBlueetooth: UIKit.UIButton!
+  @objc @IBOutlet weak public var viewDeviceBluetooth: UIKit.UIView!
+  @objc @IBOutlet weak public var viewDeviceManual: UIKit.UIView!
+  @objc @IBOutlet weak public var buttonConfirm: UIKit.UIButton!
+  @objc @IBOutlet weak public var labeldescription_1: UIKit.UILabel!
+  @objc @IBOutlet weak public var labeldescription_2: UIKit.UILabel!
+  @objc @IBOutlet weak public var labeldescription_3: UIKit.UILabel!
+  @objc @IBOutlet weak public var imageArrowBluetooth: UIKit.UIImageView!
+  @objc @IBOutlet weak public var imageArrowManual: UIKit.UIImageView!
+  @objc @IBOutlet weak public var stackFailMessage: UIKit.UIStackView!
+  @objc @IBOutlet weak public var iconWarning: UIKit.UIImageView!
+  @objc @IBOutlet weak public var teniometerIconBluetoothButtonResync: UIKit.UIImageView!
+  @objc @IBOutlet weak public var labelDescriptionCellBluetoothTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionCellBluetooth: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionCellManualTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionCellManual: UIKit.UILabel!
+  @objc @IBOutlet weak public var systolicPressureValueLabelDetail: UIKit.UILabel!
+  @objc @IBOutlet weak public var diastolicPressureNameLabelDetail: UIKit.UILabel!
+  @objc @IBOutlet weak public var heartRateNameLabelDetail: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonViewContainer: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension TensiometerDetailViewController : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc dynamic public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers public class CVCalendarPresenter : ObjectiveC.NSObject {
+  public func updateView()
+  public func setUpView()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class EmailReceiversViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet public var cancelButton: UIKit.UIBarButtonItem!
+  @objc @IBOutlet public var saveButton: UIKit.UIBarButtonItem!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func dismissKeyboard()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PollTitleTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var title: UIKit.UILabel!
+  @objc @IBOutlet weak public var pollDescription: UIKit.UITextView!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HCRGenericButton : UIKit.UIButton {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class GamificationDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var gamificationDetail: UIKit.UITableView!
+  @objc @IBOutlet weak public var progressCounter: UIKit.UILabel!
+  @objc @IBOutlet weak public var gamificationProgressBar: UIKit.UIProgressView!
+  @objc @IBOutlet weak public var topInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var progressView: UIKit.UIView!
+  @objc @IBOutlet weak public var topInfoStackView: UIKit.UIStackView!
+  @objc @IBOutlet weak public var inProcessLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonsView: UIKit.UIView!
+  @objc @IBOutlet weak public var nextButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var backButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var heightProgressConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var buttonsViewHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMCallViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var collectionView: UIKit.UICollectionView!
+  @objc @IBOutlet weak public var viewBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var videoButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var soundButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var optionButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var endCallButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var optionBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var openChatButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var silenceAllButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var backgroundOptionButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var avatarImagenView: UIKit.UIImageView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc @IBAction public func videoAction(_ sender: Any)
+  @objc @IBAction public func soundAction(_ sender: Any)
+  @objc @IBAction public func optionAction(_ sender: Any)
+  @objc @IBAction public func endCallAction(_ sender: Any)
+  @objc @IBAction public func backgroundOptionAction(_ sender: Any)
+  @objc @IBAction public func openChatAction(_ sender: Any)
+  @objc @IBAction public func silenceAllAction(_ sender: Any)
+  public func activeMenuOption(state: Swift.Bool)
+  public func configureView()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ConferenceNMCallViewController : UIKit.UICollectionViewDataSource {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension ConferenceNMCallViewController : UIKit.UICollectionViewDelegate {
+}
+extension ConferenceNMCallViewController : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+@objc @_hasMissingDesignatedInitializers public class CalendarDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet public var tableView: UIKit.UITableView!
+  @objc @IBOutlet public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var bottomToolBar: UIKit.UIToolbar!
+  @objc @IBOutlet weak public var addNewAppointmentBarButtonItem: UIKit.UIBarButtonItem!
+  @objc @IBOutlet weak public var footerButtonHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var footerButtonTopConstraint: UIKit.NSLayoutConstraint!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension CalendarDetailViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@_hasMissingDesignatedInitializers public class GamificationDetailRouter {
+  public class func createModule(formAssignId: Swift.Int, title: Swift.String?, creationDate: Swift.Int?, pending: Swift.Bool) -> UIKit.UIViewController
+  @objc deinit
+}
+extension Optional {
+  public func null() -> Any
+}
+@objc @_hasMissingDesignatedInitializers public class ScaleDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var labelIntroduction: UIKit.UILabel!
+  @objc @IBOutlet weak public var textFieldWeight: UIKit.UITextField!
+  @objc @IBOutlet weak public var labelFailMessage: UIKit.UILabel!
+  @objc @IBOutlet weak public var btnSend: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonConfirm: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnSincronization: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnBlueetooth: UIKit.UIButton!
+  @objc @IBOutlet weak public var btnDatamanual: UIKit.UIButton!
+  @objc @IBOutlet weak public var viewDeviceBluetooth: UIKit.UIView!
+  @objc @IBOutlet weak public var viewDeviceManual: UIKit.UIView!
+  @objc @IBOutlet weak public var labeldescription_1: UIKit.UILabel!
+  @objc @IBOutlet weak public var labeldescription_2: UIKit.UILabel!
+  @objc @IBOutlet weak public var labeldescription_3: UIKit.UILabel!
+  @objc @IBOutlet weak public var imageArrowBluetooth: UIKit.UIImageView!
+  @objc @IBOutlet weak public var stackFailMessage: UIKit.UIStackView!
+  @objc @IBOutlet weak public var imageArrowManual: UIKit.UIImageView!
+  @objc @IBOutlet weak public var labelDescriptionCellBluetoothTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionCellBluetooth: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionCellManualTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelDescriptionCellManual: UIKit.UILabel!
+  @objc @IBOutlet weak public var iconWarning: UIKit.UIImageView!
+  @objc @IBOutlet weak public var iconBluetoothButtonResync: UIKit.UIImageView!
+  @objc @IBOutlet weak public var labelWeight: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonViewContainer: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ScaleDetailViewController : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc dynamic public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+@objc @_hasMissingDesignatedInitializers public class EntityViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @objc @IBOutlet weak public var codeEntity: UIKit.UITextField!
+  @objc @IBOutlet weak public var verifyEntity: FrameworkEhCOS.HCRGenericButton!
+  @objc @IBOutlet weak public var labelTextField: UIKit.UILabel!
+  @objc @IBOutlet weak public var backButton: UIKit.UIButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @objc public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension UIColor {
+  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
+  convenience public init?(hex: Swift.String)
+  convenience public init(hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1.0)
+  convenience public init(rgb: Swift.Int)
+}
+@objc @_hasMissingDesignatedInitializers public class InfoHealthReceiversViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var assignButton: UIKit.UIButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PollAssignationTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var customBackgroundView: UIKit.UIView!
+  @objc @IBOutlet weak public var wrapperView: UIKit.UIView!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateTextLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var patientNameLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var markMessageImageView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var markMessageWidthConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var contentImageLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var documentImage: UIKit.UIImageView!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class CheckBox : UIKit.UIButton {
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMPresentationViewController : UIKit.UIViewController {
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ConferenceNMPresentationViewController : UIKit.UITextFieldDelegate {
+  @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+}
+extension ConferenceNMPresentationViewController : UIKit.UICollectionViewDataSource {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension ConferenceNMPresentationViewController : UIKit.UICollectionViewDelegate {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForHeaderInSection section: Swift.Int) -> CoreGraphics.CGSize
+}
+extension ConferenceNMPresentationViewController : UIKit.UICollectionViewDelegateFlowLayout {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreGraphics.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, insetForSectionAt section: Swift.Int) -> UIKit.UIEdgeInsets
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, minimumLineSpacingForSectionAt section: Swift.Int) -> CoreGraphics.CGFloat
+}
+extension ConferenceNMPresentationViewController {
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+@objc @_hasMissingDesignatedInitializers public class UserListViewController : UIKit.UIViewController, UserNotifications.UNUserNotificationCenterDelegate {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var headerView: UIKit.UIView!
+  @objc @IBOutlet weak public var labelHeader: UIKit.UILabel!
+  @objc @IBOutlet weak public var searchBar: UIKit.UISearchBar!
+  @objc @IBOutlet weak public var EmptyUsersListView: UIKit.UIView!
+  @objc @IBOutlet weak public var labelEmpty: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension UserListViewController : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension UserListViewController : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension UserListViewController : UIKit.UISearchBarDelegate {
+  @objc dynamic public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+}
+@objc @_hasMissingDesignatedInitializers public class CallContainerAppointmentViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var navigationBar: FrameworkEhCOS.NavigationBar!
+  @objc @IBOutlet weak public var navigationBarHeight: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var containerInCallView: UIKit.UIView!
+  @objc @IBOutlet weak public var containerPreCallView: UIKit.UIView!
+  public var isCaller: Swift.Bool
+  public var roomId: Swift.String?
+  public var callerId: Swift.String?
+  public var calleeId: Swift.String?
+  public var errorPer: Swift.Bool
+  public var calleeName: Swift.String?
+  public var callerName: Swift.String?
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public var traitCollection: UIKit.UITraitCollection {
+    @objc get
+  }
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EntitySelectedViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var selectEntityView: UIKit.UIStackView!
+  @objc @IBOutlet weak public var textTitle: UIKit.UILabel!
+  @objc @IBOutlet weak public var textDescription: UIKit.UILabel!
+  @objc @IBOutlet weak public var entitySelected: UIKit.UIButton!
+  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var aceptButton: UIKit.UIButton!
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class InfoHealthDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var mediaImageView: UIKit.UIImageView!
+  @objc @IBOutlet weak public var mediaTypeLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var mediaLink: UIKit.UILabel!
+  @objc @IBOutlet weak public var mediaView: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class FirstEmailHistoryTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var senderLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var subjectLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var dateLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var contentLabel: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class InfoHealthComposerViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var pickerView: UIKit.UIPickerView!
+  @objc @IBOutlet weak public var pickerButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var sendButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var cancelButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var pickerContentView: UIKit.UIView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class MenuTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var nameButton: UIKit.UIButton!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class DetailWMachineViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @objc @IBOutlet weak public var nameDeviceWM: UIKit.UILabel!
+  @objc @IBOutlet weak public var imageDeviceVM: UIKit.UIImageView!
+  @objc @IBOutlet weak public var textFieldDeviceWM: UIKit.UITextField!
+  @objc @IBOutlet weak public var buttonWMCancel: UIKit.UIButton!
+  @objc @IBOutlet weak public var labelDateConfirm: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelWeight: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonWMSend: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonWMConfirm: UIKit.UIButton!
+  @objc @IBOutlet weak public var labelHeaderWeight: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class ResourceViewerViewController : UIKit.UIViewController {
+  public init(nib: Swift.String, bundle: Foundation.Bundle)
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func loadView()
+  @objc override dynamic public func didReceiveMemoryWarning()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class VideoconferenceDetailViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var imgUSer: UIKit.UIImageView!
+  @objc @IBOutlet weak public var textName: UIKit.UILabel!
+  @objc @IBOutlet weak public var textCode: UIKit.UILabel!
+  @objc @IBOutlet weak public var callButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var videoCallButton: UIKit.UIButton!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class InboxesViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension InboxesViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@objc @_hasMissingDesignatedInitializers public class ConferenceNMNewViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var searchBar: UIKit.UISearchBar!
+  @objc @IBOutlet weak public var searchBarBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var headerLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var headerBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var sessionConferenceButton: FrameworkEhCOS.CustomNextButton!
+  @objc @IBOutlet weak public var sessionConferenceBackground: UIKit.UIView!
+  @objc @IBOutlet weak public var noInfoView: UIKit.UIView!
+  @objc @IBOutlet weak public var emptyListLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var buttonSession: UIKit.UIButton!
+  @objc @IBOutlet weak public var buttonPresentation: UIKit.UIButton!
+  @objc @IBOutlet weak public var labelSessionPresentation: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelSession: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelPresentation: UIKit.UILabel!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidLayoutSubviews()
+  @objc @IBAction public func sessionConferenceAction(_ sender: Any)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ConferenceNMNewViewController : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension ConferenceNMNewViewController : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+}
+extension ConferenceNMNewViewController : UIKit.UISearchBarDelegate {
+  @objc dynamic public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+}
+@objc public enum KeyboardAvoidingMode : Swift.Int {
+  case maximum
+  case minimum
+  case minimumDelayed
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class KeyboardAvoiding : ObjectiveC.NSObject {
+  public static var isKeyboardVisible: Swift.Bool {
+    get
+  }
+  public static var buffer: CoreGraphics.CGFloat
+  public static var paddingForCurrentAvoidingView: CoreGraphics.CGFloat
+  @objc public static var padding: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  public static var keyboardAvoidingMode: FrameworkEhCOS.KeyboardAvoidingMode
+  @objc public static var avoidingBlock: ((Swift.Bool, CoreGraphics.CGFloat, CoreGraphics.CGFloat, UIKit.UIView.AnimationOptions) -> Swift.Void)? {
+    @objc get
+    @objc set
+  }
+  @objc public static var avoidingView: UIKit.UIView? {
+    @objc get
+    @objc set
+  }
+  @objc public class func setAvoidingView(_ avoidingView: UIKit.UIView?, withTriggerView triggerView: UIKit.UIView)
+  public class func addTriggerView(_ triggerView: UIKit.UIView)
+  public class func removeTriggerView(_ triggerView: UIKit.UIView)
+  public class func removeAll()
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension UIViewController {
+  public func showLoader()
+  public func hideLoader()
+}
+@objc @_hasMissingDesignatedInitializers public class SecondDataTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var labelType: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelUserName: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelProfName: UIKit.UILabel!
+  @objc @IBOutlet weak public var labelState: UIKit.UILabel!
+  @objc @IBOutlet weak public var nameGroup: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+}
+@_hasMissingDesignatedInitializers public class VitalSignRouter {
+  public static func createModule() -> UIKit.UIViewController
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CallContainerRouter {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class TutorTutorizedPopoverViewController : UIKit.UIViewController {
+  @objc @IBOutlet weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var infoLabel: UIKit.UILabel!
+  @objc @IBOutlet weak public var tutorTutorizedTableView: UIKit.UITableView!
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension TutorTutorizedPopoverViewController : UIKit.UITableViewDelegate {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension TutorTutorizedPopoverViewController : UIKit.UITableViewDataSource {
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  public func evaluateNameAndSurname(name: Swift.String?, surname: Swift.String?) -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class GamificationsListRouter {
+  public class func createModule() -> UIKit.UIViewController
+  @objc deinit
+}
+public enum PollTab : Swift.Int {
+  case assigned
+  case user
+  case movements
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HCRGenericTextField : UIKit.UITextField, UIKit.UITextFieldDelegate {
+  @objc @IBInspectable public var animationDuration: Swift.Double
+  @objc @IBInspectable public var subjectColor: UIKit.UIColor
+  @objc @IBInspectable public var underLineColor: UIKit.UIColor
+  @objc @IBInspectable public var hidePassword: Swift.Bool
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @objc public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @objc public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class InfoHealthDetailTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet weak public var titleLbl: UIKit.UILabel!
+  @objc @IBOutlet weak public var infoLbl: UIKit.UILabel!
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers public class ChatViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UITextFieldDelegate {
+  @objc @IBOutlet weak public var bottomView: UIKit.UIView!
+  @objc @IBOutlet weak public var containerView: UIKit.UIView!
+  @objc @IBOutlet weak public var tableView: UIKit.UITableView!
+  @objc @IBOutlet weak public var messageTestView: UIKit.UITextView!
+  @objc @IBOutlet weak public var sendMessageButton: UIKit.UIButton!
+  @objc @IBOutlet weak public var heightConstraintTextView: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet weak public var bottomConstraint: UIKit.NSLayoutConstraint!
+  @objc dynamic public init()
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @objc override dynamic public func dismissKeyboard()
+  @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc deinit
+}
+extension ChatViewController : UIKit.UITextViewDelegate {
+  @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+}
+public enum VideoCallSystem : Swift.String, Swift.Codable {
+  case i2cat
+  case googleMeet
+  case openVidu
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct LoginResponse : FrameworkEhCOS.ResultCode, Swift.Codable {
+  public var resultCode: Swift.String?
+  public var resultDescription: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct LoginUsers : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension FrameworkEhCOS.InfoClinicData : Swift.Equatable {}
+extension FrameworkEhCOS.InfoClinicData : Swift.Hashable {}
+extension UIKit.UIAlertController.QuestionType : Swift.Equatable {}
+extension UIKit.UIAlertController.QuestionType : Swift.Hashable {}
+extension UIKit.UIDevice.ScreenType : Swift.Equatable {}
+extension UIKit.UIDevice.ScreenType : Swift.Hashable {}
+extension UIKit.UIDevice.ScreenType : Swift.RawRepresentable {}
+extension FrameworkEhCOS.StoryboardPrivate : Swift.Equatable {}
+extension FrameworkEhCOS.StoryboardPrivate : Swift.Hashable {}
+extension FrameworkEhCOS.StoryboardPrivate : Swift.RawRepresentable {}
+extension UIKit.UIView.BorderSide : Swift.Equatable {}
+extension UIKit.UIView.BorderSide : Swift.Hashable {}
+extension FrameworkEhCOS.KeyboardAvoidingMode : Swift.Equatable {}
+extension FrameworkEhCOS.KeyboardAvoidingMode : Swift.Hashable {}
+extension FrameworkEhCOS.KeyboardAvoidingMode : Swift.RawRepresentable {}
+extension FrameworkEhCOS.PollTab : Swift.Equatable {}
+extension FrameworkEhCOS.PollTab : Swift.Hashable {}
+extension FrameworkEhCOS.PollTab : Swift.RawRepresentable {}
+extension FrameworkEhCOS.VideoCallSystem : Swift.Equatable {}
+extension FrameworkEhCOS.VideoCallSystem : Swift.Hashable {}
+extension FrameworkEhCOS.VideoCallSystem : Swift.RawRepresentable {}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapViewCell" rowHeight="400" id="KGk-i7-Jjw" customClass="MapViewCell" customModule="ViperProyectoUdemy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVw-wO-ahW">
+                        <rect key="frame" x="8" y="8" width="304" height="384"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fn1-wE-ItV">
+                                <rect key="frame" x="8" y="12" width="288" height="364"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="364" id="YRM-dp-8Lx"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fn1-wE-ItV" firstAttribute="top" secondItem="CVw-wO-ahW" secondAttribute="top" constant="12" id="6Jw-QV-C52"/>
+                            <constraint firstAttribute="trailing" secondItem="fn1-wE-ItV" secondAttribute="trailing" constant="8" id="7kd-Yj-V0f"/>
+                            <constraint firstAttribute="bottom" secondItem="fn1-wE-ItV" secondAttribute="bottom" constant="8" id="U48-rF-GRL"/>
+                            <constraint firstItem="fn1-wE-ItV" firstAttribute="leading" secondItem="CVw-wO-ahW" secondAttribute="leading" constant="8" id="rLO-sf-PFz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="CVw-wO-ahW" secondAttribute="bottom" constant="8" id="8nJ-e2-aIz"/>
+                    <constraint firstAttribute="trailing" secondItem="CVw-wO-ahW" secondAttribute="trailing" constant="8" id="FAi-dV-qzV"/>
+                    <constraint firstItem="CVw-wO-ahW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="q9B-M8-xGJ"/>
+                    <constraint firstItem="CVw-wO-ahW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xz1-db-ulI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="mapaView" destination="fn1-wE-ItV" id="lzF-73-fQw"/>
+                <outlet property="myView" destination="CVw-wO-ahW" id="fgX-NC-780"/>
+            </connections>
+            <point key="canvasLocation" x="78.260869565217391" y="102.45535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

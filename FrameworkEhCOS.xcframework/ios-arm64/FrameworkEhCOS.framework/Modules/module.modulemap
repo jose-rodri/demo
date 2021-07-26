@@ -1,0 +1,11 @@
+framework module FrameworkEhCOS {
+  umbrella header "FrameworkEhCOS.h"
+
+  export *
+  module * { export * }
+}
+
+module FrameworkEhCOS.Swift {
+    header "FrameworkEhCOS-Swift.h"
+    requires objc
+}
